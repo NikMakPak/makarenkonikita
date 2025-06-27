@@ -131,3 +131,43 @@ const mouseMove = (e) => {
   };
 window.addEventListener("mousemove", mouseMove),
   window.addEventListener("resize", windowResize);
+
+document.querySelectorAll(".project-box").forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty("--x", `${x}px`);
+    card.style.setProperty("--y", `${y}px`);
+  });
+});
+
+const previewCursor = document.createElement("div");
+previewCursor.className = "live-preview-cursor";
+previewCursor.textContent = "Кликните для просмотра ▶️";
+document.body.appendChild(previewCursor);
+
+const projectCards = document.querySelectorAll(".project-box");
+let hideTimeoutId;
+
+projectCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    previewCursor.style.left = `${e.clientX}px`;
+    previewCursor.style.top = `${e.clientY}px`;
+  });
+
+  card.addEventListener("mouseenter", () => {
+    clearTimeout(hideTimeoutId);
+    previewCursor.style.display = "block";
+    setTimeout(() => {
+      previewCursor.style.opacity = "1";
+    }, 10);
+  });
+
+  card.addEventListener("mouseleave", () => {
+    previewCursor.style.opacity = "0";
+    hideTimeoutId = setTimeout(() => {
+      previewCursor.style.display = "none";
+    }, 300);
+  });
+});

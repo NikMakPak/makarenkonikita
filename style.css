@@ -82,11 +82,12 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
+    cursor: url(click.png), auto;
 }
 
 :root {
-    cursor: default;
+    /* cursor: default; */
     --color-white: #fff;
     --color-black: #000;
     --color-dark-mode: #11111b;
@@ -2016,4 +2017,58 @@ footer {
         height: fit-content;
         margin-top: 100px;  
     }
+}
+
+.project-box:hover {
+  transform: scale(1.03);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.project-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle 300px at var(--x) var(--y),
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  border-radius: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.project-box:hover::before {
+  opacity: 1;
+}
+
+.js-tilt {
+  cursor: pointer;
+}
+
+.js-tilt:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.live-preview-cursor {
+  position: fixed;
+  padding: 8px 16px;
+  background-color: rgba(128, 0, 255, 0.25);
+  color: #fff;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 99999;
+  pointer-events: none;
+  font-size: 1.4rem;
+  font-family: "Fira Code", monospace;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(15px, 15px);
+  display: none;
 }

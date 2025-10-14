@@ -2122,6 +2122,12 @@ footer {
   display: none;
 }
 
+@media (max-width: 900px) {
+  .live-preview-cursor {
+    display: none !important;
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -2146,7 +2152,7 @@ footer {
   background: #1a1a1a;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -2202,7 +2208,7 @@ footer {
 
 @media (max-width: 768px) {
   .modal-content {
-    width: 76%;
+    width: 92%;
     height: 70%;
   }
 
@@ -2218,6 +2224,5 @@ footer {
 @media (max-width: 480px) {
   .modal-content {
     height: 60%;
-    max-width: 346px;
   }
 }

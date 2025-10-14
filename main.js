@@ -150,13 +150,29 @@ document.body.appendChild(previewCursor);
 const projectCards = document.querySelectorAll(".project-box");
 let hideTimeoutId;
 
+function isDesktopScreen() {
+  return window.innerWidth >= 900;
+}
+
+function updateCursorVisibility() {
+  previewCursor.style.display = isDesktopScreen() ? "none" : "none";
+}
+
+// Начальная проверка при загрузке
+updateCursorVisibility();
+
+// Слушаем изменение размера окна
+window.addEventListener("resize", updateCursorVisibility);
+
 projectCards.forEach((card) => {
   card.addEventListener("mousemove", (e) => {
+    if (!isDesktopScreen()) return;
     previewCursor.style.left = `${e.clientX}px`;
     previewCursor.style.top = `${e.clientY}px`;
   });
 
   card.addEventListener("mouseenter", () => {
+    if (!isDesktopScreen()) return;
     clearTimeout(hideTimeoutId);
     previewCursor.style.display = "block";
     setTimeout(() => {
@@ -165,6 +181,7 @@ projectCards.forEach((card) => {
   });
 
   card.addEventListener("mouseleave", () => {
+    if (!isDesktopScreen()) return;
     previewCursor.style.opacity = "0";
     hideTimeoutId = setTimeout(() => {
       previewCursor.style.display = "none";

@@ -1955,6 +1955,7 @@ footer {
 
   .landing-page-container {
     height: 55vh;
+    padding-top: 20px;
   }
 
   .text-content {

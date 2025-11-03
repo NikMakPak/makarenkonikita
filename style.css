@@ -726,6 +726,16 @@ noscript {
   animation: 0.9s both jello-vertical;
 }
 
+.start-talk {
+  margin-top: 2em;
+}
+.start-talk .letsTalkBtn-text {
+  color: #000;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  font-size: 1em;
+}
+
 #backtotopbutton,
 .dp::after,
 .dp::before,
@@ -1454,6 +1464,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 3em;
 }
 
 .social-media-container a {

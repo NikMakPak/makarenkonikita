@@ -607,7 +607,7 @@ noscript {
 
 #name,
 #work {
-  font-size: 8rem;
+  font-size: 7rem;
   width: fit-content;
 }
 
@@ -818,7 +818,7 @@ noscript {
 
 .contact-btn-div {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 30px;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -828,7 +828,7 @@ noscript {
 .letsTalkBtn {
   position: relative;
   border: none;
-  width: 180px;
+  width: 281px;
   height: 40px;
   border-radius: 0;
   cursor: pointer;
@@ -1627,6 +1627,86 @@ footer {
 
 .tonechange {
   color: #000;
+}
+
+/* Tags inline-list styles for landing page */
+.tags-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  position: relative; /* needed for ::before */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 2rem; /* main text size */
+  background: transparent;
+  border: 2px solid #e2dede; /* same as .social-media-container a */
+  border-radius: 999px; /* fully rounded pill */
+  color: var(--color-white);
+  cursor: default;
+  user-select: none;
+  box-shadow: 0 0 0 #8000ff inset;
+  transition-duration: 0.3s;
+  transition: box-shadow 1s, border 1s;
+}
+
+.tag::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 999px;
+  transform: scale(0);
+  background-color: transparent;
+  transition-duration: 0.3s;
+  z-index: -1;
+}
+
+.tag:hover,
+.tag:focus {
+  box-shadow: 0 0 50px 100px #8000ff inset;
+  transition-duration: 1s;
+  border: none;
+  outline: none;
+}
+
+.tag:hover::before,
+.tag:focus::before {
+  transform: scale(1);
+  transition-duration: 0.3s;
+}
+
+.tag:focus-visible {
+  outline: 2px solid rgba(128, 0, 255, 0.25);
+  outline-offset: 3px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .tag {
+    font-size: 1.2rem;
+    padding: 0.35rem 0.75rem;
+  }
+  .tags-list {
+    gap: 0.6rem;
+  }
 }
 
 @media screen and (max-width: 1920px) {

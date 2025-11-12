@@ -39,11 +39,11 @@
       content="Makarenko Nikita | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions."
     />
     <title>Makarenko Nikita | Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="../src/ico/nikmak.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/ico/nikmak.ico" />
     <!-- aos cdn -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- stylesheet -->
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <!-- google fonts-->
     <link
       rel="stylesheet"
@@ -63,7 +63,7 @@
         <div class="logo" tabindex="0" aria-label="Makarenko Nikita logo">
           <div class="logo-top">
             <img
-              src="../src/webp/nikmakmem.webp"
+              src="/src/webp/nikmakmem.webp"
               alt="animation-head"
               id="nav-avatar"
             />
@@ -123,7 +123,11 @@
 
     <main>
       <!-- hamburger -->
-      <div class="hamburger" id="hamburger" data-aos="fade">
+      <div
+        class="hamburger aos-init aos-animate"
+        id="hamburger"
+        data-aos="fade"
+      >
         <div class="hamburgerbase">
           <button
             id="hamburger-button"
@@ -145,8 +149,12 @@
             class="mobile-navbar-tabs-li home activeThismobiletab"
             onclick="hidemenubyli()"
           >
-            <a href="#home" tabindex="0" aria-label="Home menu button">
-              &#60;/Home&#62;
+            <a
+              href="https://nikmakpak.github.io/makarenkonikita/#home"
+              tabindex="0"
+              aria-label="Home menu button"
+            >
+              &lt;/Home&gt;
             </a>
           </li>
 
@@ -155,8 +163,12 @@
             class="mobile-navbar-tabs-li about"
             onclick="hidemenubyli()"
           >
-            <a href="#about" tabindex="0" aria-label="about menu button">
-              &#60;/AboutMe&#62;
+            <a
+              href="https://nikmakpak.github.io/makarenkonikita/#about"
+              tabindex="0"
+              aria-label="about menu button"
+            >
+              &lt;/AboutMe&gt;
             </a>
           </li>
           <li
@@ -164,8 +176,12 @@
             class="mobile-navbar-tabs-li skills"
             onclick="hidemenubyli()"
           >
-            <a href="#skills" tabindex="0" aria-label="skills menu button">
-              &#60;/Skills&#62;
+            <a
+              href="https://nikmakpak.github.io/makarenkonikita/#skills"
+              tabindex="0"
+              aria-label="skills menu button"
+            >
+              &lt;/Skills&gt;
             </a>
           </li>
           <li
@@ -173,8 +189,12 @@
             class="mobile-navbar-tabs-li projects"
             onclick="hidemenubyli()"
           >
-            <a href="#projects" tabindex="0" aria-label="projects menu button">
-              &#60;/Projects&#62;
+            <a
+              href="https://nikmakpak.github.io/makarenkonikita/#projects"
+              tabindex="0"
+              aria-label="projects menu button"
+            >
+              &lt;/Projects&gt;
             </a>
           </li>
         </ul>
@@ -189,13 +209,6 @@
             <p class="jello">H</p>
             <p class="jello">I</p>
             <p class="jello">👋</p>
-            <!-- <p class="jello">H</p>
-          <p class="jello">s</p>
-          <p class="jello">t</p>
-          <p class="jello">e</p>
-          <p class="jello">(</p>
-          <p class="jello">)</p>
-          <p class="jello">;</p> -->
             &nbsp;
             <p class="jello">I</p>
             <p class="jello">'</p>
@@ -250,62 +263,75 @@
               <p class="jello">s</p>
             </div>
           </article>
-          <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-            I develop web applications using React with a focus on usability,
-            performance, and architecture. Working with me means you get clear
-            deadlines, 24/7 communication, expert opinions, and professional
-            results!<br />
-            I have 4 years of experience in frontend development with React,
-            HTML, SCSS, and JS. I strive not only to fulfill the technical
-            specifications but also to enhance your business.<br />
-            <br />
-            Let's turn your idea into reality! 😎
-          </p>
-          <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
+          <div
+            class="tags-wrapper aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <ul class="tags-list" role="list">
+              <li
+                class="tag"
+                tabindex="0"
+                role="listitem"
+                aria-label="Удобство. Скорость. Результат."
+              >
+                 Fast. Simple. Effective.
+              </li>
+              <li
+                class="tag"
+                tabindex="0"
+                role="listitem"
+                aria-label="4 года exp"
+              >
+                4 years of experience.
+              </li>
+              <li
+                class="tag"
+                tabindex="0"
+                role="listitem"
+                aria-label="Четкие сроки. Связь 24/7."
+              >
+                On time. Every time.
+              </li>
+              <li
+                class="tag"
+                tabindex="0"
+                role="listitem"
+                aria-label="Рост вашего бизнеса"
+              >
+                 Built to grow your business.
+              </li>
+              <li
+                class="tag"
+                tabindex="0"
+                role="listitem"
+                aria-label="Рост вашего бизнеса"
+              >
+                Modern tech stack.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="contact-btn-div aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <a href="https://t.me/i_nikmak" tabindex="-1">
               <button class="letsTalkBtn">
-                <p class="letsTalkBtn-text">Start a conversation!</p>
+                <p class="letsTalkBtn-text">Bring your idea to life!</p>
                 <span class="letsTalkBtn-BG"></span></button
             ></a>
-            <div class="setting-container" id="setting-container">
-              <input
-                type="checkbox"
-                id="switchforsetting"
-                onclick="settingtoggle()"
-              />
-
-              <label
-                for="switchforsetting"
-                class="needtobeinvert"
-                id="labelforsetting"
-                tabindex="0"
-                aria-label="settings for sound and appearance"
-              ></label>
-
-              <div
-                class="visualmodetogglebuttoncontainer"
-                id="visualmodetogglebuttoncontainer"
-              >
-                <input
-                  type="checkbox"
-                  id="switchforvisualmode"
-                  onclick="visualmode()"
-                />
-                <label
-                  for="switchforvisualmode"
-                  id="labelforvisualmode"
-                  tabindex="0"
-                  aria-label="switch appearance"
-                ></label>
-              </div>
-            </div>
             <!-- setting div ends -->
           </div>
           <!-- contact-btn-div -->
         </div>
       </section>
       <!-- landing page ends here -->
-      <section class="about-section-container" id="about" data-aos="fade-up">
+      <section
+        class="about-section-container aos-init"
+        id="about"
+        data-aos="fade-up"
+      >
         <div class="about-section">
           <div class="section-heading">
             <h2
@@ -313,50 +339,74 @@
               tabindex="0"
               aria-label="About me heading"
             >
-              &#60;/About Me&#62;
+              &lt;/About Me&gt;
             </h2>
             <p class="sectionHeadingP"></p>
           </div>
 
           <div class="info-dp-section">
             <div class="about-info">
-              <p tabindex="0">
-                Hello! My name is Nikita. Since 2021, I have been professionally
-                engaged in web development. My specialization is creating web
-                platforms, business solutions, applications of any complexity,
-                Telegram Mini Apps, landing pages, online stores, and other
-                internet resources.
+               <p tabindex="0">
+                Hi, I’m Nikita Makarenko, a developer and automation expert
+                helping businesses run smarter. Since 2021, I’ve been building
+                clean and reliable products: websites, instagramm and facebook bots, web apps,
+                CRMs, and custom platforms that actually make work easier.
               </p>
               <br />
               <p tabindex="0">
-                I believe that success is achieved only through proper planning
-                and communication. By using the agile approach applied in
-                BigTech companies, I ensure results in the shortest possible
-                time.
+                I work with an agile mindset and focus on real impact: faster
+                processes, higher efficiency, and better results. If you’re
+                looking for someone who understands both code and business,
+                you’re in the right place. <br />
+                Let’s turn your idea into something powerful.
               </p>
-              <br />
-              <p tabindex="0">
-                If you need to create not just a beautiful website, but a real
-                quality tool for your business, then write to me, and together
-                we will create a website that works for you!
-              </p>
-              <!-- Resume button -->
-              <button class="resume-btn" id="resume-btn" onclick="openURL()">
-                <div class="sign">
-                  <svg viewBox="0 0 640 512">
-                    <path
-                      d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z"
-                    />
-                  </svg>
-                </div>
+              <div class="social-media-container">
+                <div class="logos">
+                  <a
+                    href="https://www.linkedin.com/in/i-nikmak/"
+                    target="_blank"
+                    aria-label="My Linkdin"
+                    ><svg class="SocialHandle" viewBox="0 0 448 512">
+                      <path
+                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                      ></path></svg
+                  ></a>
 
-                <div class="text">Resume</div>
-              </button>
+                  <a
+                    href="https://github.com/nikmakpak"
+                    target="_blank"
+                    aria-label="My github"
+                    ><svg viewBox="0 0 496 512" class="SocialHandle">
+                      <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      ></path></svg
+                  ></a>
+
+                  <a
+                    href="mailto:imakarenkonp@gmail.com"
+                    target="_blank"
+                    aria-label="My G mail"
+                    ><svg id="GmailLogo" viewBox="0 0 512 512">
+                      <path
+                        d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                      ></path></svg
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Resume button
+              <div class="start-talk">
+                <a href="https://t.me/i_nikmak" tabindex="-1">
+                  <button class="letsTalkBtn">
+                    <p class="letsTalkBtn-text">Обсудить проект</p>
+                    <span class="letsTalkBtn-BG"></span></button
+                ></a>
+              </div> -->
             </div>
 
             <div class="dp" data-aos="fade-up">
               <img
-                src="../src/webp/nikmak.webp"
+                src="/src/png/makarenko.png"
                 alt="Makarenko Nikita"
                 tabindex="0"
                 aria-label="image of Nikita Makarenko"
@@ -365,125 +415,125 @@
           </div>
         </div>
       </section>
-
       <!-- about section ends  -->
 
       <section class="skills-section-container" id="skills">
         <div class="skills-section">
-          <div class="section-heading" data-aos="fade-up">
+          <div class="section-heading aos-init" data-aos="fade-up">
             <h2
               class="section-heading-article"
               tabindex="0"
               aria-label="skills heading"
             >
-              &#60;/Skills&#62;
+              &lt;/Skills&gt;
             </h2>
             <p class="sectionHeadingP"></p>
           </div>
 
           <div class="frontend-dev-section">
-            <h3
-              class="frontend-dev-heading"
-              data-aos="fade-up"
-              tabindex="0"
-              aria-label="As a frontend a developer these are the skills i have"
-            >
-              Мои технологии
-            </h3>
             <ul class="tech-stack-wrapper">
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/htmllogo.png"
-                  alt="Html skill"
+                  src="/src/png/python_logo.png"
+                  alt="python skills"
                   class="tech-stack-logo"
                 />
-                <span class="tooltip">HTML</span>
+                <span class="tooltip">PYTHON</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/csslogo.png"
-                  alt="css skill"
-                  class="tech-stack-logo"
-                />
-                <span class="tooltip">CSS</span>
-              </li>
-
-              <li class="tech-stack-box" data-aos="fade-up">
-                <img
-                  src="../src/png/jslogo.png"
-                  alt="js skill"
-                  class="tech-stack-logo"
-                />
-                <span class="tooltip">JS</span>
-              </li>
-
-              <li class="tech-stack-box" data-aos="fade-up">
-                <img
-                  src="../src/png/bootstraplogo.png"
-                  alt="bootstrap skill"
-                  class="tech-stack-logo"
-                />
-                <span class="tooltip">BOOTSTRAP</span>
-              </li>
-
-              <li class="tech-stack-box" data-aos="fade-up">
-                <img
-                  src="../src/png/reactlogo.png"
+                  src="/src/png/reactlogo.png"
                   alt="react skill"
                   class="tech-stack-logo"
                 />
                 <span class="tooltip">REACTJS</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/nextlogo.png"
+                  src="/src/png/nextlogo.png"
                   alt="nextjs skill"
                   class="tech-stack-logo"
                 />
                 <span class="tooltip">NEXTJS</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/node.png"
+                  src="/src/png/htmllogo.png"
+                  alt="Html skill"
+                  class="tech-stack-logo"
+                />
+                <span class="tooltip">HTML</span>
+              </li>
+
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
+                <img
+                  src="/src/png/csslogo.png"
+                  alt="css skill"
+                  class="tech-stack-logo"
+                />
+                <span class="tooltip">CSS</span>
+              </li>
+
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
+                <img
+                  src="/src/png/jslogo.png"
+                  alt="js skill"
+                  class="tech-stack-logo"
+                />
+                <span class="tooltip">JS</span>
+              </li>
+
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
+                <img
+                  src="/src/png/bootstraplogo.png"
+                  alt="bootstrap skill"
+                  class="tech-stack-logo"
+                />
+                <span class="tooltip">BOOTSTRAP</span>
+              </li>
+
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
+                <img
+                  src="/src/png/node.png"
                   alt="nodejs skill"
                   class="tech-stack-logo"
                 />
-                <span class="tooltip">NODEJS</span>
+                <span class="tooltip">DANCE</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/astro.png"
+                  src="/src/png/astro.png"
                   alt="astro skill"
                   class="tech-stack-logo"
                 />
                 <span class="tooltip">ASTRO</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/githublogo.png"
+                  src="/src/png/githublogo.png"
                   alt="github skill"
                   class="tech-stack-logo needtobeinvert"
                 />
                 <span class="tooltip">GITHUB</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/gitlogo.png"
+                  src="/src/png/gitlogo.png"
                   alt="git skill"
                   class="tech-stack-logo"
                 />
                 <span class="tooltip">GIT</span>
               </li>
 
-              <li class="tech-stack-box" data-aos="fade-up">
+              <li class="tech-stack-box aos-init" data-aos="fade-up">
                 <img
-                  src="../src/png/figmalogo.png"
+                  src="/src/png/figmalogo.png"
                   alt="figma skill"
                   class="tech-stack-logo"
                 />
@@ -496,10 +546,209 @@
       <!-- skills section ends -->
       <section class="projects-section-container" id="projects">
         <div class="projects-section-div">
-          <div class="section-heading" data-aos="fade-up"></div>
+          <div class="section-heading aos-init" data-aos="fade-up">
+            <h2
+              class="section-heading-article"
+              tabindex="0"
+              aria-label="My projects starts from here"
+            >
+              &lt;/Projects&gt;
+            </h2>
+            <p class="sectionHeadingP"></p>
+          </div>
           <div class="project-boxes-div">
-            <!-- Projects -->
-            <div class="project-box-wrapper" data-aos="fade-up">
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/1o0QasfeKd-XCJBBNvywKFYBXdlLglzlw/preview"
+                aria-label="Watch Portfolio preview"
+              >
+                <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="Bravell Estates logo"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">Real Estate Website</article>
+                  <p class="ProjectDescription">
+                    Bravell Estates is a luxury real estate company in Portugal.
+                    We've developed a premium website with a property catalog,
+                    an application form, smooth animation, and SEO optimization.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Stack:</strong> HTML, SASS, JavaScript, GSAP,
+                    Python, AOS, Swiper.js, LazyLoad
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      class="cta"
+                      onclick="showVideoModal(event)"
+                      preview-video-url="https://drive.google.com/file/d/1o0QasfeKd-XCJBBNvywKFYBXdlLglzlw/preview"
+                      aria-label="Watch Portfolio preview"
+                    >
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/src/png/bravell.png"
+                    alt="Bravell Estates preview image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/1Qe3wAl16caiHu1Pr4ADwZijMlz3R4kxo/preview"
+                aria-label="Watch Portfolio preview"
+              >
+                <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="comickaze website favicon"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">SmartRevolution</article>
+                  <p class="ProjectDescription">
+                    Smart Revolution is the landing page of a company offering
+                    solutions for automating routine processes, improving
+                    information security, and optimizing energy consumption.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Stack:</strong> React, SCSS, TypeScript, Formik,
+                    Node.js
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      class="cta"
+                      onclick="showVideoModal(event)"
+                      preview-video-url="https://drive.google.com/file/d/1Qe3wAl16caiHu1Pr4ADwZijMlz3R4kxo/preview"
+                      aria-label="Watch Portfolio preview"
+                    >
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/src/png/tech.png"
+                    alt="SmartRevolution website preview image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/1weU1Xtvy5ghW2cJy1kFvEoTcq3hhwBxd/preview"
+                aria-label="Watch Portfolio preview"
+              >
+                <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="YouLead Event Bot logo"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">Tudobox Website</article>
+                  <p class="ProjectDescription">
+                    Tudobox is a modern, user-friendly website with a responsive
+                    design for a Lisbon warehouse hub for business and personal
+                    use.
+                  </p>
+
+                  <p class="ProjectDescription">
+                    <strong>Stack:</strong> Webflow, HTML, SASS, JavaScript,
+                    Cookie, Convert
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      class="cta"
+                      onclick="showVideoModal(event)"
+                      preview-video-url="https://drive.google.com/file/d/1weU1Xtvy5ghW2cJy1kFvEoTcq3hhwBxd/preview"
+                      aria-label="Watch Portfolio preview"
+                    >
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/src/png/tudobox_preview1.png"
+                    alt="Tudobox preview image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/18dExB16aEiv5QEi2xMxpuzXtcew9HhNH/preview"
+                aria-label="Watch Portfolio preview"
+              >
+                <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="YouLead Event Bot logo"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">YouLead Event Bot</article>
+                  <p class="ProjectDescription">
+                    YouLead Event Bot is a Telegram bot that automates the
+                    YouLead forum: application collection, gamification, resume
+                    uploading, push notifications, and integration with Google
+                    Sheets and Yandex Disk.
+                  </p>
+
+                  <p class="ProjectDescription">
+                    <strong>Stack:</strong> Python, aiogram v3, Google API,
+                    Yandex Disk API
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      class="cta"
+                      onclick="showVideoModal(event)"
+                      preview-video-url="https://drive.google.com/file/d/1ir1QoE9L4yDy0YBsEnPAzSqQUsDqWeH7/preview"
+                      aria-label="Watch Portfolio preview"
+                    >
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/src/png/youlead_bot.png"
+                    alt="YouLead Event Bot preview image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
               <div
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
@@ -507,10 +756,17 @@
                 aria-label="Watch Portfolio preview"
               >
                 <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="comickaze website favicon"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">Encar Parser Bot</article>
                   <p class="ProjectDescription">
-                    Encar Parser Bot - a professional solution for tracking the
-                    Encar website with subscription to notifications about new
-                    cars, flexible filters and analytics right from Telegram!
+                    Encar Parser Bot is a professional solution for tracking the
+                    Encar website, with a subscription to new car notifications,
+                    flexible filters, and analytics, all without leaving
+                    Telegram!
                   </p>
                   <p class="ProjectDescription">
                     <strong>Stack:</strong> React, TypeScript, Redux, Python,
@@ -524,7 +780,7 @@
                       preview-video-url="https://drive.google.com/file/d/1ir1QoE9L4yDy0YBsEnPAzSqQUsDqWeH7/preview"
                       aria-label="Watch Portfolio preview"
                     >
-                      <span>Watch</span>
+                      <span>Look</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
                         <path d="M1,5 L11,5"></path>
                         <polyline points="8 1 12 5 8 9"></polyline>
@@ -534,14 +790,14 @@
                 </div>
                 <div class="image-div">
                   <img
-                    src="../src/png/encar_bot.png"
+                    src="/src/png/encar_bot.png"
                     alt="Encar Parser website preview image"
                   />
                 </div>
               </div>
             </div>
 
-            <div class="project-box-wrapper" data-aos="fade-up">
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
               <div
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
@@ -550,7 +806,7 @@
               >
                 <div class="info-div">
                   <img
-                    src="../src/webp/logoN.webp"
+                    src="/src/webp/logoN.webp"
                     alt="comickaze website favicon"
                     class="faviconforProject"
                   />
@@ -558,9 +814,9 @@
                     StratoMind Business Platform
                   </article>
                   <p class="ProjectDescription">
-                    StratoMind Business Platform - an online service for
-                    creating detailed virtual business models considering
-                    economic indicators.
+                    StratoMind Business Platform is an online service for
+                    creating detailed virtual business models based on economic
+                    indicators.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Stack:</strong> React.js, SCSS, TypeScript,
@@ -573,23 +829,66 @@
                       preview-video-url="https://drive.google.com/file/d/10qqr2nLW8ca4ZybMdMu3byxn9nFVNHeS/preview"
                       aria-label="Watch Portfolio preview"
                     >
-                      <span>Watch</span>
+                      <span>Look</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
                         <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
                       </svg>
                     </a>
                   </div>
                 </div>
                 <div class="image-div">
                   <img
-                    src="../src/png/stratomind.png"
-                    alt="StratoMind website preview image"
+                    src="/src/png/stratomind.png"
+                    alt="StratoMindStratoMind website preview image"
                   />
                 </div>
               </div>
             </div>
 
-            <div class="project-box-wrapper" data-aos="fade-up">
+            <div data-aos="fade-up" class="project-box-wrapper aos-init">
+              <div class="project-box project-box2" id="project-box2">
+                <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="pexelicon website favicon"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">EnglishGalaxy</article>
+                  <p class="ProjectDescription">
+                    EnglishGalaxy is an educational platform for learning
+                    English. The website offers a systematic conversational
+                    course by Alexander Bebris, helping you progress from A0 to
+                    A2.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Stack:</strong> HTML, CSS/SCSS, JavaScript
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      href="https://speaking.enggalaxy.com/"
+                      target="_blank"
+                      class="cta"
+                      aria-label="Visit EnglishGalaxy Live"
+                    >
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/src/png/engspeak.png"
+                    alt="EnglishGalaxy website preview image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
               <div
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
@@ -597,9 +896,15 @@
                 aria-label="Watch Portfolio preview"
               >
                 <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="comickaze website favicon"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">CRM Audit Platform</article>
                   <p class="ProjectDescription">
-                    CRM Audit Platform - a platform for automating document
-                    workflow in audit processes.
+                    CRM Audit Platform is a platform for automating document
+                    management within audit processes.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Stack:</strong> React, TypeScript, MobX, Node.js,
@@ -612,21 +917,23 @@
                       preview-video-url="https://drive.google.com/file/d/1PUBQk56159-hie6NV4adW7sBqbQJWja3/preview"
                       aria-label="Watch Portfolio preview"
                     >
-                      <span>Watch</span>
-                      <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
                     </a>
                   </div>
                 </div>
                 <div class="image-div">
                   <img
-                    src="../src/png/aiesec.png"
+                    src="/src/png/aiesec.png"
                     alt="CRM Audit Platform website preview image"
                   />
                 </div>
               </div>
             </div>
-
-            <div class="project-box-wrapper" data-aos="fade-up">
+            <div class="project-box-wrapper aos-init" data-aos="fade-up">
               <div
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
@@ -634,9 +941,15 @@
                 aria-label="Watch Portfolio preview"
               >
                 <div class="info-div">
+                  <img
+                    src="/src/webp/logoN.webp"
+                    alt="comickaze website favicon"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">Crypto Art</article>
                   <p class="ProjectDescription">
-                    Crypto Art - a web platform for publishing and discussing
-                    articles about cryptocurrency. Users can read, comment and
+                    Crypto Art is a web platform for publishing and discussing
+                    articles about cryptocurrency. Users can read, comment, and
                     share their own materials.
                   </p>
                   <p class="ProjectDescription">
@@ -650,19 +963,125 @@
                       preview-video-url="https://drive.google.com/file/d/1IuVb5VpTnHq7I2buJEFm28UDmi8puIHl/preview"
                       aria-label="Watch Portfolio preview"
                     >
-                      <span>Watch</span>
-                      <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
+                      <span>Look</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
                     </a>
                   </div>
                 </div>
                 <div class="image-div">
                   <img
-                    src="../src/png/articles.png"
+                    src="/src/png/articles.png"
                     alt="Crypto Art website preview image"
                   />
                 </div>
               </div>
             </div>
+
+            <!-- <div class="project-box-wrapper" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/1Y9-lyB7tHaCCvmFkbZ4MDeglhQmX9ULm/preview"
+                aria-label="Watch Portfolio preview"
+              >
+                <div class="info-div">
+                  <img
+                    src="src/webp/logoN.webp"
+                    alt="comickaze website favicon"
+                    class="faviconforProject"
+                  />
+                  <article class="ProjectHeading">
+                    Professional portfolio
+                  </article>
+                  <p class="ProjectDescription">
+                    Professional Portfolio – персональный сайт-портфолио для
+                    демонстрации профессиональных навыков, опыта и выполненных
+                    проектов.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Stack:</strong> Next.js, SCSS, TypeScript, Node.js
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      class="cta"
+                      onclick="showVideoModal(event)"
+                      preview-video-url="https://drive.google.com/file/d/1Y9-lyB7tHaCCvmFkbZ4MDeglhQmX9ULm/preview"
+                      aria-label="Watch Portfolio preview"
+                    >
+                      <span>Посмотреть</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="src/png/port.png"
+                    alt="portfolio website preview image"
+                  />
+                </div>
+              </div>
+            </div> -->
+
+            <style></style>
+
+            <script>
+              function showVideoModal(element) {
+                const modal = document.getElementById("videoModal");
+                const iframe = document.getElementById("videoFrame");
+                const videoUrl = element.getAttribute("preview-video-url");
+                iframe.src = videoUrl;
+                modal.style.display = "block";
+                document.body.style.overflowY = "hidden";
+
+                // Добавляем слушатель для закрытия по клику вне модалки
+                modal.addEventListener("click", function (event) {
+                  if (event.target === modal) {
+                    closeVideoModal();
+                  }
+                });
+
+                // Добавляем слушатель для закрытия по касанию вне модалки на мобильных
+                modal.addEventListener("touchstart", function (event) {
+                  if (event.target === modal) {
+                    closeVideoModal();
+                  }
+                });
+              }
+
+              function closeVideoModal() {
+                const modal = document.getElementById("videoModal");
+                const iframe = document.getElementById("videoFrame");
+                iframe.src = "";
+                modal.style.display = "none";
+                document.body.style.overflowY = "auto";
+
+                // Удаляем слушатели событий при закрытии
+                modal.removeEventListener("click", closeVideoModal);
+                modal.removeEventListener("touchstart", closeVideoModal);
+              }
+
+              // Close modal on click outside
+              document
+                .getElementById("videoModal")
+                .addEventListener("click", function (e) {
+                  if (e.target === this) {
+                    closeVideoModal();
+                  }
+                });
+
+              // Close modal on Escape key press
+              document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                  closeVideoModal();
+                }
+              });
+            </script>
           </div>
         </div>
       </section>
@@ -670,8 +1089,13 @@
     <!-- main ends here -->
 
     <footer id="footer">
-      <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-        <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+      <button
+        class="fas"
+        id="backtotopbutton"
+        onclick="scrolltoTopfunction()"
+        style="display: none"
+      >
+        <article aria-label="Back to top">←BACK TO TOP</article>
       </button>
       <div class="footer-background">
         <div class="footer-blob"></div>
@@ -686,10 +1110,14 @@
               "Learning, Living, and Leveling Up."
             </article>
           </div>
+          <div class="start-talk">
+            <a href="https://t.me/i_nikmak" tabindex="-1">
+              <button class="letsTalkBtn">
+                <p class="letsTalkBtn-text">Discuss the project</p>
+                <span class="letsTalkBtn-BG"></span></button
+            ></a>
+          </div>
           <div class="social-media-container">
-            <div class="getintouch-heading">
-              <article>GetinTouch();</article>
-            </div>
             <div class="logos">
               <a
                 href="https://www.linkedin.com/in/i-nikmak/"
@@ -698,7 +1126,7 @@
                 ><svg class="SocialHandle" viewBox="0 0 448 512">
                   <path
                     d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  /></svg
+                  ></path></svg
               ></a>
 
               <a
@@ -708,7 +1136,7 @@
                 ><svg viewBox="0 0 496 512" class="SocialHandle">
                   <path
                     d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  /></svg
+                  ></path></svg
               ></a>
 
               <a
@@ -718,13 +1146,13 @@
                 ><svg id="GmailLogo" viewBox="0 0 512 512">
                   <path
                     d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                  /></svg
+                  ></path></svg
               ></a>
             </div>
           </div>
           <div class="footer-avatar-container">
             <img
-              src="../src/webp/nikmakmem.webp"
+              src="/src/webp/nikmakmem.webp"
               alt="animation-head"
               class="footer-avatar-img"
               id="footer-wala-avatar"
@@ -738,8 +1166,18 @@
             </div>
           </div> -->
           </div>
-          <div class="footer-bottom">
-            <article>Design & Built by Makarenko Nikita &#169; 2025</article>
+           <div class="footer-bottom">
+            <article aria-label="Design and build info">
+              Design & Built by Makarenko Nikita &copy; <span id="yearRange">2021 - </span>
+            </article>
+            <script>
+              (function () {
+                const el = document.getElementById('yearRange');
+                if (!el) return;
+                const year = new Date().getFullYear();
+                el.textContent = `2021 - ${year}`;
+              })();
+            </script>
           </div>
         </div>
       </div>
@@ -755,16 +1193,28 @@
       </div>
     </div>
 
-    <script src="../main.js"></script>
+    <script src="/main.js"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
 
+    <!-- <script>
+      function openURL() {
+        var url = "src/pdf/cv.pdf";
+
+        window.open(url, "_blank");
+      }
+    </script> -->
+
+    <script>
+      AOS.init();
+    </script>
+
     <script>
       function openURL() {
-        var url = "../src/pdf/cv.pdf";
+        var url = "src/pdf/cv.pdf";
 
         window.open(url, "_blank");
       }
@@ -781,9 +1231,6 @@
 
         cursorInner.style.left = `${posX}px`;
         cursorInner.style.top = `${posY}px`;
-
-        // cursorOuter.style.left = `${posX}px`;
-        // cursorOuter.style.top = `${posY}px`;
 
         cursorOuter.animate(
           {
@@ -805,14 +1252,5 @@
         });
       });
     </script>
-    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
-    <!-- <script>
-  kofiWidgetOverlay.draw('makarenkonp', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#794bc4',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script> -->
   </body>
 </html>

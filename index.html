@@ -336,8 +336,8 @@
                     aria-label="My telegram"
                     ><svg
                       class="SocialHandle"
-                      width="900px"
-                      height="900px"
+                      width="60px"
+                      height="60px"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1110,8 +1110,8 @@
                 aria-label="My telegram"
                 ><svg
                   class="SocialHandle"
-                  width="900px"
-                  height="900px"
+                  width="60px"
+                  height="60px"
                   viewBox="0 0 48 48"
                 >
                   <path
@@ -1167,7 +1167,18 @@
           </div> -->
           </div>
           <div class="footer-bottom">
-            <article>Design & Built by Makarenko Nikita &#169; 2025</article>
+            <article aria-label="Design and build info">
+              Design & Built by Makarenko Nikita &copy;
+              <span id="yearRange">2021 - </span>
+            </article>
+            <script>
+              (function () {
+                const el = document.getElementById("yearRange");
+                if (!el) return;
+                const year = new Date().getFullYear();
+                el.textContent = `2021 - ${year}`;
+              })();
+            </script>
           </div>
         </div>
       </div>
@@ -1183,20 +1194,20 @@
       </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="/main.js"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-
+    <!-- 
     <script>
       function openURL() {
         var url = "src/pdf/cv.pdf";
 
         window.open(url, "_blank");
       }
-    </script>
+    </script> -->
 
     <script>
       const cursorInner = document.getElementById("cursor-inner");

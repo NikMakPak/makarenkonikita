@@ -144,7 +144,15 @@ document.querySelectorAll(".project-box").forEach((card) => {
 
 const previewCursor = document.createElement("div");
 previewCursor.className = "live-preview-cursor";
-previewCursor.textContent = "Кликните для просмотра ▶️";
+// Default preview text (Russian)
+let previewText = "Кликните для просмотра ▶️";
+// If the page is the English index (eng/index.html or /eng/), override to English
+const pathname = window.location.pathname || "";
+const isEngIndex = /\/eng(\/(index\.html)?)?$/.test(pathname);
+if (isEngIndex) {
+  previewText = "Click to preview ▶️";
+}
+previewCursor.textContent = previewText;
 document.body.appendChild(previewCursor);
 
 const projectCards = document.querySelectorAll(".project-box");

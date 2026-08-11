@@ -4,7 +4,8 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/eng", "destination": "/", "permanent": true },
-    { "source": "/eng/:path*", "destination": "/", "permanent": true }
+    { "source": "/eng/", "destination": "/", "permanent": true },
+    { "source": "/eng/:path+", "destination": "/", "permanent": true }
   ],
   "headers": [
     {

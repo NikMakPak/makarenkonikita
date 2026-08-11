@@ -138,6 +138,27 @@ Push to `main`. Vercel builds from the repo root with no build command.
 stale-while-revalidate. Asset filenames are not content-hashed, so a replaced image
 can take up to a day to propagate — bump the filename if it must be instant.
 
+### `trailingSlash` + `redirects` gotcha
+
+With `trailingSlash: true`, Vercel normalizes every extensionless path to end in
+`/` **before** matching it against `redirects.source`. A rule written as
+`/eng/:path*` looks like it should cover the bare `/eng/` case (`:path*` = zero or
+more segments), but path-to-regexp's zero-match for a `*` segment does not include
+the separating slash — so `/eng/:path*` matches `/eng` and `/eng/foo`, but *not*
+`/eng/`. The request 404s.
+
+Any redirect for a bare directory path needs an **exact rule for the
+trailing-slash form**, plus `:path+` (one or more) for nested paths:
+
+```json
+{ "source": "/old-path", "destination": "/", "permanent": true },
+{ "source": "/old-path/", "destination": "/", "permanent": true },
+{ "source": "/old-path/:path+", "destination": "/", "permanent": true }
+```
+
+Verify with `curl -sD - -o /dev/null <url>` against the deployed site, not just
+by reading the config — this bug produces valid JSON and looks correct on paper.
+
 ## Horizontal overflow
 
 `.blob` (the purple hero glow) sits at `right: -15%`. Its parent

@@ -124,10 +124,9 @@
       }
     </script>
   </head>
-
   <body class="body">
     <div id="preloader"></div>
-    <noscript>Allow Javascript</noscript>
+    <noscript>Включите JavaScript</noscript>
 
     <header>
       <div class="cursor-inner" id="cursor-inner"></div>
@@ -135,7 +134,7 @@
 
       <div class="navbar" id="navbar">
         <div class="hey">Hey!</div>
-        <div class="logo" tabindex="0" aria-label="Makarenko Nikita logo">
+        <div class="logo" tabindex="0" aria-label="Логотип Никиты Макаренко">
           <div class="logo-top">
             <img
               src="/assets/img/avatar.webp"
@@ -151,7 +150,7 @@
               data-aos="fade-down"
               data-aos-delay="100"
             >
-              <a href="#home" tabindex="0" aria-label="Home menu button">
+              <a href="#home" tabindex="0" aria-label="Пункт меню: главная">
                 &#60;/Home&#62;
               </a>
             </li>
@@ -161,7 +160,7 @@
               data-aos="fade-down"
               data-aos-delay="300"
             >
-              <a href="#about" aria-label="about menu button">
+              <a href="#about" aria-label="Пункт меню: обо мне">
                 &#60;/About Me&#62;
               </a>
             </li>
@@ -171,7 +170,7 @@
               data-aos="fade-down"
               data-aos-delay="500"
             >
-              <a href="#skills" aria-label="skills menu button">
+              <a href="#skills" aria-label="Пункт меню: навыки">
                 &#60;/Skills&#62;
               </a>
             </li>
@@ -181,10 +180,11 @@
               data-aos="fade-down"
               data-aos-delay="700"
             >
-              <a href="#projects" aria-label="projects menu button">
+              <a href="#projects" aria-label="Пункт меню: проекты">
                 &#60;/Projects&#62;
               </a>
             </li>
+
             <li class="lang-switch" data-aos="fade-down" data-aos-delay="900">
               <a
                 href="/"
@@ -206,13 +206,17 @@
 
     <main>
       <!-- hamburger -->
-      <div class="hamburger" id="hamburger" data-aos="fade">
+      <div
+        class="hamburger"
+        id="hamburger"
+        data-aos="fade"
+      >
         <div class="hamburgerbase">
           <button
             id="hamburger-button"
             onclick="hamburgerMenu()"
             tabindex="0"
-            aria-label="Menu Button"
+            aria-label="Кнопка меню"
           >
             <span class="burger-bar" id="burger-bar1"></span>
             <span class="burger-bar" id="burger-bar2"></span>
@@ -228,8 +232,8 @@
             class="mobile-navbar-tabs-li home activeThismobiletab"
             onclick="hidemenubyli()"
           >
-            <a href="#home" tabindex="0" aria-label="Home menu button">
-              &#60;/Home&#62;
+            <a href="#home" tabindex="0" aria-label="Пункт меню: главная">
+              &lt;/Home&gt;
             </a>
           </li>
 
@@ -238,8 +242,8 @@
             class="mobile-navbar-tabs-li about"
             onclick="hidemenubyli()"
           >
-            <a href="#about" tabindex="0" aria-label="about menu button">
-              &#60;/AboutMe&#62;
+            <a href="#about" tabindex="0" aria-label="Пункт меню: обо мне">
+              &lt;/AboutMe&gt;
             </a>
           </li>
           <li
@@ -247,8 +251,8 @@
             class="mobile-navbar-tabs-li skills"
             onclick="hidemenubyli()"
           >
-            <a href="#skills" tabindex="0" aria-label="skills menu button">
-              &#60;/Skills&#62;
+            <a href="#skills" tabindex="0" aria-label="Пункт меню: навыки">
+              &lt;/Skills&gt;
             </a>
           </li>
           <li
@@ -256,13 +260,13 @@
             class="mobile-navbar-tabs-li projects"
             onclick="hidemenubyli()"
           >
-            <a href="#projects" tabindex="0" aria-label="projects menu button">
-              &#60;/Projects&#62;
+            <a href="#projects" tabindex="0" aria-label="Пункт меню: проекты">
+              &lt;/Projects&gt;
             </a>
           </li>
           <li class="mobile-navbar-tabs-li mobile-lang-switch">
             <a href="/" data-lang="en" hreflang="en" lang="en" tabindex="0">
-              &#60;/English version&#62;
+              &lt;/English version&gt;
             </a>
           </li>
         </ul>
@@ -273,11 +277,11 @@
         <div class="blob"></div>
 
         <div class="text-content">
-          <!-- Видимый hero разбивает имя на буквы ради jello-анимации, а <p>
-               нельзя вложить в заголовок. Здесь тот же текст как настоящий H1. -->
+          <!-- The visible hero splits every letter into its own <p> for the jello
+               animation, which cannot live inside a heading. This carries the same
+               words as the real document heading. -->
           <h1 class="visually-hidden">
-            Никита Макаренко — AI-инженер и CTO, создаю продающие сайты и
-            автоматизацию
+            Никита Макаренко — AI-инженер и CTO, создаю продукты на базе AI
           </h1>
           <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
             <p class="jello">П</p>
@@ -286,6 +290,7 @@
             <p class="jello">в</p>
             <p class="jello">е</p>
             <p class="jello">т</p>
+            &nbsp;
             <p class="jello">👋</p>
             &nbsp;
             <p class="jello">Я</p>
@@ -307,8 +312,9 @@
             <p class="jello">н</p>
             <p class="jello">к</p>
             <p class="jello">о</p>
-            <p class="jello">,</p>
+            <p class="jello">.</p>
           </article>
+
           <article id="work" data-aos="fade-up" data-aos-delay="400">
             <div>
               <p class="jello">С</p>
@@ -323,85 +329,96 @@
               <p class="jello">р</p>
               <p class="jello">о</p>
               <p class="jello">д</p>
-              <p class="jello">а</p>
-              <p class="jello">ю</p>
-              <p class="jello">щ</p>
-              <p class="jello">и</p>
-              <p class="jello">е</p>
-            </div>
-            <div>
-              <p class="jello">с</p>
-              <p class="jello">а</p>
-              <p class="jello">й</p>
+              <p class="jello">у</p>
+              <p class="jello">к</p>
               <p class="jello">т</p>
               <p class="jello">ы</p>
             </div>
+            <div>
+              <p class="jello">н</p>
+              <p class="jello">а</p>
+              &nbsp;
+              <p class="jello">б</p>
+              <p class="jello">а</p>
+              <p class="jello">з</p>
+              <p class="jello">е</p>
+              &nbsp;
+              <p class="jello">A</p>
+              <p class="jello">I</p>
+            </div>
           </article>
-          <div class="tags-wrapper" data-aos="fade-up" data-aos-delay="600">
+          <div
+            class="tags-wrapper"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <ul class="tags-list" role="list">
               <li
                 class="tag"
                 tabindex="0"
                 role="listitem"
-                aria-label="Удобство. Скорость. Результат."
+                aria-label="AI-инженер и CTO"
               >
-                Удобство. Скорость. Результат.
+                AI-инженер и CTO
               </li>
               <li
                 class="tag"
                 tabindex="0"
                 role="listitem"
-                aria-label="4 года exp"
+                aria-label="5 лет опыта"
               >
-                4 года опыта.
+                5 лет опыта.
               </li>
               <li
                 class="tag"
                 tabindex="0"
                 role="listitem"
-                aria-label="Четкие сроки. Связь 24/7."
+                aria-label="AI-агенты и автоматизация"
               >
-                Четкие сроки. Связь 24/7.
+                AI-агенты и автоматизация.
               </li>
               <li
                 class="tag"
                 tabindex="0"
                 role="listitem"
-                aria-label="Рост вашего бизнеса"
+                aria-label="От идеи до масштабируемого продукта"
               >
-                Рост вашего бизнеса.
+                От идеи до масштабируемого продукта.
               </li>
               <li
                 class="tag"
                 tabindex="0"
                 role="listitem"
-                aria-label="Рост вашего бизнеса"
+                aria-label="Технологии, которые приносят деньги"
               >
-                Современный стек.
+                Технологии, которые приносят деньги.
               </li>
             </ul>
           </div>
-          <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
+          <div class="contact-btn-div">
             <a href="https://t.me/i_nikmak" tabindex="-1">
               <button class="letsTalkBtn">
                 <p class="letsTalkBtn-text">Воплотить идею в реальность!</p>
                 <span class="letsTalkBtn-BG"></span></button
             ></a>
-            <!-- setting div ends -->
           </div>
           <!-- contact-btn-div -->
         </div>
       </section>
       <!-- landing page ends here -->
-      <section class="about-section-container" id="about" data-aos="fade-up">
+      <section
+        class="about-section-container"
+        id="about"
+        data-aos="fade-up"
+      >
         <div class="about-section">
           <div class="section-heading">
             <h2
               class="section-heading-article"
               tabindex="0"
-              aria-label="About me heading"
+              aria-label="Заголовок раздела обо мне"
             >
-              &#60;/About Me&#62;
+              &lt;/About Me&gt;
             </h2>
             <p class="sectionHeadingP"></p>
           </div>
@@ -409,65 +426,50 @@
           <div class="info-dp-section">
             <div class="about-info">
               <p tabindex="0">
-                Здравствуйте! <br />
-                Меня зовут Никита Макаренко. С 2021 года профессионально
-                занимаюсь комплексной автоматизацией бизнеса: веб-сайты,
-                telegram-боты, mini apps, CRM-решения, лендинги и онлайн-сервисы
-                любой сложности.
+                Привет! Меня зовут Никита Макаренко. Я разработчик и специалист по
+                автоматизации — помогаю бизнесу работать умнее. С 2021 года
+                собираю понятные и надёжные продукты: сайты, ботов для Instagram
+                и Facebook, веб-приложения, CRM и платформы под задачу, которые
+                действительно упрощают работу.
               </p>
               <br />
               <p tabindex="0">
-                Работаю по agile-принципам, совмещая техническую экспертизу и
-                понимание бизнес-логики. <br />
-                Создаю решения, которые упрощают процессы и увеличивают
-                эффективность.
+                Работаю по agile и смотрю на результат: процессы быстрее,
+                эффективность выше, отдача заметнее. Если вам нужен человек,
+                который одинаково хорошо понимает и код, и бизнес, — вы по
+                адресу. <br />
+                Давайте превратим вашу идею во что-то сильное.
               </p>
-
               <div class="social-media-container">
                 <div class="logos">
                   <a
                     href="https://t.me/i_nikmak"
                     target="_blank"
-                    aria-label="My telegram"
-                    ><svg
-                      class="SocialHandle"
-                      width="60px"
-                      height="60px"
-                      viewBox="0 0 48 48"
-                    >
+                    aria-label="Мой Telegram"
+                    ><svg class="SocialHandle" viewBox="0 0 48 48">
                       <path
                         d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"
-                      /></svg
-                  ></a>
-
-                  <a
-                    href="https://www.linkedin.com/in/i-nikmak/"
-                    target="_blank"
-                    aria-label="My Linkdin"
-                    ><svg class="SocialHandle" viewBox="0 0 448 512">
-                      <path
-                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                      /></svg
-                  ></a>
+                      ></path></svg
+                    ></a>
 
                   <a
                     href="https://github.com/nikmakpak"
                     target="_blank"
-                    aria-label="My github"
+                    aria-label="Мой GitHub"
                     ><svg viewBox="0 0 496 512" class="SocialHandle">
                       <path
                         d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                      /></svg
+                      ></path></svg
                   ></a>
 
                   <a
                     href="mailto:imakarenkonp@gmail.com"
                     target="_blank"
-                    aria-label="My G mail"
+                    aria-label="Написать на почту"
                     ><svg id="GmailLogo" viewBox="0 0 512 512">
                       <path
                         d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                      /></svg
+                      ></path></svg
                   ></a>
                 </div>
               </div>
@@ -487,7 +489,7 @@
                 src="/assets/img/nikita-makarenko.webp"
                 alt="Никита Макаренко, AI-инженер и CTO"
                 tabindex="0"
-                aria-label="image of Nikita Makarenko" width="600" height="610" loading="lazy" decoding="async"
+                aria-label="Фотография Никиты Макаренко" width="600" height="610" loading="lazy" decoding="async"
               />
             </div>
           </div>
@@ -501,9 +503,9 @@
             <h2
               class="section-heading-article"
               tabindex="0"
-              aria-label="skills heading"
+              aria-label="Заголовок раздела навыков"
             >
-              &#60;/Skills&#62;
+              &lt;/Skills&gt;
             </h2>
             <p class="sectionHeadingP"></p>
           </div>
@@ -513,7 +515,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/python.webp"
-                  alt="Python logo"
+                  alt="Логотип Python"
                   class="tech-stack-logo" width="256" height="256" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">PYTHON</span>
@@ -521,17 +523,35 @@
 
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
-                  src="/assets/img/stack/telegram.webp"
-                  alt="Telegram logo"
+                  src="/assets/img/stack/claude.webp"
+                  alt="Логотип Claude AI"
                   class="tech-stack-logo" width="256" height="256" loading="lazy" decoding="async"
                 />
-                <span class="tooltip">TELEGRAM</span>
+                <span class="tooltip">CLAUDE AI</span>
+              </li>
+
+              <li class="tech-stack-box" data-aos="fade-up">
+                <img
+                  src="/assets/img/stack/chatgpt.webp"
+                  alt="Логотип ChatGPT"
+                  class="tech-stack-logo" width="256" height="256" loading="lazy" decoding="async"
+                />
+                <span class="tooltip">CHATGPT AI</span>
+              </li>
+
+              <li class="tech-stack-box" data-aos="fade-up">
+                <img
+                  src="/assets/img/stack/gemini.webp"
+                  alt="Логотип Gemini"
+                  class="tech-stack-logo" width="256" height="256" loading="lazy" decoding="async"
+                />
+                <span class="tooltip">GEMINI AI</span>
               </li>
 
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/react.webp"
-                  alt="React logo"
+                  alt="Логотип React"
                   class="tech-stack-logo" width="256" height="252" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">REACTJS</span>
@@ -540,7 +560,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/nextjs.webp"
-                  alt="Next.js logo"
+                  alt="Логотип Next.js"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">NEXTJS</span>
@@ -548,8 +568,17 @@
 
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
+                  src="/assets/img/stack/docker.webp"
+                  alt="Логотип Docker"
+                  class="tech-stack-logo" width="256" height="256" loading="lazy" decoding="async"
+                />
+                <span class="tooltip">DOCKER</span>
+              </li>
+
+              <li class="tech-stack-box" data-aos="fade-up">
+                <img
                   src="/assets/img/stack/html.webp"
-                  alt="HTML5 logo"
+                  alt="Логотип HTML5"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">HTML</span>
@@ -558,7 +587,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/css.webp"
-                  alt="CSS3 logo"
+                  alt="Логотип CSS3"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">CSS</span>
@@ -567,7 +596,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/javascript.webp"
-                  alt="JavaScript logo"
+                  alt="Логотип JavaScript"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">JS</span>
@@ -576,7 +605,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/bootstrap.webp"
-                  alt="Bootstrap logo"
+                  alt="Логотип Bootstrap"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">BOOTSTRAP</span>
@@ -585,16 +614,16 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/nodejs.webp"
-                  alt="Node.js logo"
+                  alt="Логотип Node.js"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
-                <span class="tooltip">NODEJS</span>
+                <span class="tooltip">DANCE</span>
               </li>
 
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/astro.webp"
-                  alt="Astro logo"
+                  alt="Логотип Astro"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">ASTRO</span>
@@ -603,7 +632,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/github.webp"
-                  alt="GitHub logo"
+                  alt="Логотип GitHub"
                   class="tech-stack-logo needtobeinvert" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">GITHUB</span>
@@ -612,7 +641,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/git.webp"
-                  alt="Git logo"
+                  alt="Логотип Git"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">GIT</span>
@@ -621,7 +650,7 @@
               <li class="tech-stack-box" data-aos="fade-up">
                 <img
                   src="/assets/img/stack/figma.webp"
-                  alt="Figma logo"
+                  alt="Логотип Figma"
                   class="tech-stack-logo" width="256" height="250" loading="lazy" decoding="async"
                 />
                 <span class="tooltip">FIGMA</span>
@@ -637,9 +666,9 @@
             <h2
               class="section-heading-article"
               tabindex="0"
-              aria-label="My projects starts from here"
+              aria-label="Здесь начинаются мои проекты"
             >
-              &#60;/Projects&#62;
+              &lt;/Projects&gt;
             </h2>
             <p class="sectionHeadingP"></p>
           </div>
@@ -647,27 +676,188 @@
             <div class="project-box-wrapper" data-aos="fade-up">
               <div
                 class="project-box project-box5 js-tilt"
-                onclick="showVideoModal(this)"
-                preview-video-url="https://drive.google.com/file/d/1o0QasfeKd-XCJBBNvywKFYBXdlLglzlw/preview"
-                aria-label="Watch Portfolio preview"
+                onclick="
+                  window.open(
+                    'https://trip-ai-student-project-mba.vercel.app/',
+                    '_blank',
+                  )
+                "
+                style="cursor: pointer"
+                aria-label="Открыть TripAI"
               >
                 <div class="info-div">
-                  <h3 class="ProjectHeading">Real Estate Website</h3>
+                  <h3 class="ProjectHeading">AI-агент для турагентств</h3>
                   <p class="ProjectDescription">
-                    Bravell Estates — luxury real estate компания в Португалии.
-                    Разработан премиальный сайт с каталогом объектов, формой
-                    заявки, плавной анимацией и SEO-оптимизацией.
+                    TripAI — AI-агент, который сам ищет, сравнивает и бронирует туры.
+                    Часы ручной работы турагентства превращаются в мгновенные
+                    подборки и готовые брони.
                   </p>
                   <p class="ProjectDescription">
-                    <strong>Стек:</strong> HTML, SASS, JavaScript, GSAP, Python,
-                    AOS, Swiper.js, LazyLoad
+                    <strong>Стек:</strong> Python, LangChain, OpenAI
+                    API, FastAPI, React, PostgreSQL, Docker
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      href="https://trip-ai-student-project-mba.vercel.app/"
+                      target="_blank"
+                      class="cta"
+                      aria-label="Открыть сайт TripAI"
+                      onclick="event.stopPropagation()"
+                    >
+                      <span>Посмотреть</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img src="/assets/img/projects/tripai.webp" alt="Интерфейс TripAI с подборкой туров, собранной AI" width="960" height="644" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper" data-aos="fade-up">
+              <div class="project-box project-box5 js-tilt">
+                <div class="info-div">
+                  <h3 class="ProjectHeading">AI-фабрика контента для YouTube</h3>
+                  <p class="ProjectDescription">
+                    Самообучающийся AI-агент, который сам создаёт, монтирует и
+                    публикует ролики на YouTube: от сценария и озвучки до сборки
+                    видео и SEO. Система разбирает аналитику канала и
+                    подстраивается под неё.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Стек:</strong> Python, GPT-4o, CrewAI, FFmpeg,
+                    ElevenLabs API, YouTube Data API, Celery, Redis, Docker
+                  </p>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/assets/img/projects/content-factory.webp"
+                    alt="Пайплайн AI Content Factory: генерация и публикация роликов на YouTube" width="960" height="484" loading="lazy" decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="
+                  window.open(
+                    'https://truewallet-react-shadcn-tailwind-jest-zod.vercel.app/',
+                    '_blank',
+                  )
+                "
+                style="cursor: pointer"
+                aria-label="Открыть TrueWallet"
+              >
+                <div class="info-div">
+                  <h3 class="ProjectHeading">TrueWallet</h3>
+                  <p class="ProjectDescription">
+                    Мобильное приложение для учёта расходов без интернета и
+                    конвертации валют. Считает траты, переводит любые валюты и
+                    хранит всё прямо на устройстве. Приватно, быстро, без
+                    лишнего веса.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Стек:</strong> React Native, TypeScript, SQLite,
+                    Expo, Zustand
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      href="https://truewallet-react-shadcn-tailwind-jest-zod.vercel.app/"
+                      target="_blank"
+                      class="cta"
+                      aria-label="Открыть сайт TrueWallet"
+                      onclick="event.stopPropagation()"
+                    >
+                      <span>Посмотреть</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/assets/img/projects/truewallet.webp"
+                    alt="Экраны TrueWallet: учёт расходов офлайн и конвертация валют" width="960" height="604" loading="lazy" decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/10qqr2nLW8ca4ZybMdMu3byxn9nFVNHeS/preview"
+                aria-label="Посмотреть превью проекта"
+              >
+                <div class="info-div">
+                  <h3 class="ProjectHeading">AI-платформа StratoMind</h3>
+                  <p class="ProjectDescription">
+                    StratoMind — AI-агент, который разбирает компании и их
+                    бизнес-модели: считает финансовые показатели, оценивает
+                    конкурентов и собирает всё в отчёт со стратегическими
+                    рекомендациями.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Стек:</strong> React.js, TypeScript, ReactFlow,
+                    MobX, FastAPI, OpenAI API, LangChain, Docker
+                  </p>
+                  <div class="project-buttons">
+                    <a
+                      class="cta"
+                      onclick="event.stopPropagation(); showVideoModal(this)"
+                      preview-video-url="https://drive.google.com/file/d/10qqr2nLW8ca4ZybMdMu3byxn9nFVNHeS/preview"
+                      aria-label="Посмотреть превью проекта"
+                    >
+                      <span>Посмотреть</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    src="/assets/img/projects/stratomind.webp"
+                    alt="Дашборд StratoMind: анализ компании и финансовые показатели" width="960" height="632" loading="lazy" decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="project-box-wrapper" data-aos="fade-up">
+              <div
+                class="project-box project-box5 js-tilt"
+                onclick="showVideoModal(this)"
+                preview-video-url="https://drive.google.com/file/d/1o0QasfeKd-XCJBBNvywKFYBXdlLglzlw/preview"
+                aria-label="Посмотреть превью проекта"
+              >
+                <div class="info-div">
+                  <h3 class="ProjectHeading">Сайт агентства недвижимости</h3>
+                  <p class="ProjectDescription">
+                    Bravell Estates — агентство элитной недвижимости в Португалии.
+                    Сделали премиальный сайт: каталог объектов, форма заявки,
+                    плавные анимации и SEO-оптимизация.
+                  </p>
+                  <p class="ProjectDescription">
+                    <strong>Стек:</strong> HTML, SASS, JavaScript, GSAP,
+                    Python, AOS, Swiper.js, LazyLoad
                   </p>
                   <div class="project-buttons">
                     <a
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1o0QasfeKd-XCJBBNvywKFYBXdlLglzlw/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -691,14 +881,14 @@
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
                 preview-video-url="https://drive.google.com/file/d/1Qe3wAl16caiHu1Pr4ADwZijMlz3R4kxo/preview"
-                aria-label="Watch Portfolio preview"
+                aria-label="Посмотреть превью проекта"
               >
                 <div class="info-div">
                   <h3 class="ProjectHeading">SmartRevolution</h3>
                   <p class="ProjectDescription">
-                    Smart Revolution – лендинг компании, предлагающей решения
-                    для автоматизации рутинных процессов, повышения
-                    информационной безопасности и оптимизации энергопотребления.
+                    Smart Revolution — лендинг компании, которая автоматизирует
+                    рутинные процессы, усиливает информационную безопасность и
+                    оптимизирует энергопотребление.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Стек:</strong> React, SCSS, TypeScript, Formik,
@@ -709,7 +899,7 @@
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1Qe3wAl16caiHu1Pr4ADwZijMlz3R4kxo/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -733,14 +923,13 @@
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
                 preview-video-url="https://drive.google.com/file/d/1weU1Xtvy5ghW2cJy1kFvEoTcq3hhwBxd/preview"
-                aria-label="Watch Portfolio preview"
+                aria-label="Посмотреть превью проекта"
               >
                 <div class="info-div">
-                  <h3 class="ProjectHeading">Tudobox Website</h3>
+                  <h3 class="ProjectHeading">Сайт Tudobox</h3>
                   <p class="ProjectDescription">
-                    Tudobox — современный сайт с удобной навигацией и адаптивным
-                    дизайном для складского хаба в Лиссабоне для бизнеса и
-                    личных задач.
+                    Tudobox — современный сайт складского хаба в Лиссабоне: удобная
+                    навигация и адаптивный дизайн для бизнеса и личных задач.
                   </p>
 
                   <p class="ProjectDescription">
@@ -752,7 +941,7 @@
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1weU1Xtvy5ghW2cJy1kFvEoTcq3hhwBxd/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -776,15 +965,15 @@
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
                 preview-video-url="https://drive.google.com/file/d/18dExB16aEiv5QEi2xMxpuzXtcew9HhNH/preview"
-                aria-label="Watch Portfolio preview"
+                aria-label="Посмотреть превью проекта"
               >
                 <div class="info-div">
-                  <h3 class="ProjectHeading">YouLead Event Bot</h3>
+                  <h3 class="ProjectHeading">Бот форума YouLead</h3>
                   <p class="ProjectDescription">
-                    YouLead Event Bot — Telegram-бот автоматизация форума
-                    YouLead: сбор заявок, геймификация, загрузка резюме,
-                    push-уведомления и интеграция с Google Sheets и Яндекс
-                    Диском.
+                    Telegram-бот, который ведёт форум YouLead: собирает заявки,
+                    начисляет очки за активность, принимает резюме, шлёт
+                    push-уведомления и синхронизируется с Google Таблицами и
+                    Яндекс Диском.
                   </p>
 
                   <p class="ProjectDescription">
@@ -796,7 +985,7 @@
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1ir1QoE9L4yDy0YBsEnPAzSqQUsDqWeH7/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -820,14 +1009,14 @@
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
                 preview-video-url="https://drive.google.com/file/d/1ir1QoE9L4yDy0YBsEnPAzSqQUsDqWeH7/preview"
-                aria-label="Watch Portfolio preview"
+                aria-label="Посмотреть превью проекта"
               >
                 <div class="info-div">
                   <h3 class="ProjectHeading">Encar Parser Bot</h3>
                   <p class="ProjectDescription">
-                    Encar Parser Bot — профессиональное решение для отслеживания
-                    сайта Encar с подпиской на уведомления о новых машинах,
-                    гибкими фильтрами и аналитикой не выходя из Telegram!
+                    Бот следит за площадкой Encar: подписка на уведомления о новых
+                    машинах, гибкие фильтры и аналитика — всё не выходя из
+                    Telegram.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Стек:</strong> React, TypeScript, Redux, Python,
@@ -839,7 +1028,7 @@
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1ir1QoE9L4yDy0YBsEnPAzSqQUsDqWeH7/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -858,58 +1047,22 @@
               </div>
             </div>
 
-            <div class="project-box-wrapper" data-aos="fade-up">
-              <div
-                class="project-box project-box5 js-tilt"
-                onclick="showVideoModal(this)"
-                preview-video-url="https://drive.google.com/file/d/10qqr2nLW8ca4ZybMdMu3byxn9nFVNHeS/preview"
-                aria-label="Watch Portfolio preview"
-              >
-                <div class="info-div">
-                  <h3 class="ProjectHeading">
-                    StratoMind Business Platform
-                  </h3>
-                  <p class="ProjectDescription">
-                    StratoMind Business Platform – онлайн-сервис для создания
-                    детализированных виртуальных моделей бизнеса с учетом
-                    экономических показателей.
-                  </p>
-                  <p class="ProjectDescription">
-                    <strong>Стек:</strong> React.js, SCSS, TypeScript,
-                    ReactFlow, Formik, MobX, Docker, FastApi
-                  </p>
-                  <div class="project-buttons">
-                    <a
-                      class="cta"
-                      onclick="event.stopPropagation(); showVideoModal(this)"
-                      preview-video-url="https://drive.google.com/file/d/10qqr2nLW8ca4ZybMdMu3byxn9nFVNHeS/preview"
-                      aria-label="Watch Portfolio preview"
-                    >
-                      <span>Посмотреть</span>
-                      <svg viewBox="0 0 13 10" height="10px" width="15px">
-                        <path d="M1,5 L11,5"></path>
-                        <polyline points="8 1 12 5 8 9"></polyline>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="image-div">
-                  <img
-                    src="/assets/img/projects/stratomind.webp"
-                    alt="Платформа StratoMind: виртуальные модели бизнеса и финансовые показатели" width="960" height="632" loading="lazy" decoding="async"
-                  />
-                </div>
-              </div>
-            </div>
-
             <div data-aos="fade-up" class="project-box-wrapper">
-              <div class="project-box project-box2" id="project-box2">
+              <div
+                class="project-box project-box2"
+                id="project-box2"
+                onclick="
+                  window.open('https://speaking.enggalaxy.com/', '_blank')
+                "
+                style="cursor: pointer"
+                aria-label="Открыть EnglishGalaxy"
+              >
                 <div class="info-div">
                   <h3 class="ProjectHeading">EnglishGalaxy</h3>
                   <p class="ProjectDescription">
-                    EnglishGalaxy – образовательная платформа для изучения
-                    английского языка. Сайт представляет системный разговорный
-                    курс Александра Бебриса, помогающий пройти путь от A0 до A2.
+                    Образовательная платформа для изучения английского. На сайте —
+                    системный разговорный курс Александра Бебриса, который
+                    доводит с нуля до уровня A2.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Стек:</strong> HTML, CSS/SCSS, JavaScript
@@ -919,7 +1072,7 @@
                       href="https://speaking.enggalaxy.com/"
                       target="_blank"
                       class="cta"
-                      aria-label="Visit EnglishGalaxy Live"
+                      aria-label="Открыть сайт EnglishGalaxy"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -932,7 +1085,7 @@
                 <div class="image-div">
                   <img
                     src="/assets/img/projects/englishgalaxy.webp"
-                    alt="Платформа EnglishGalaxy: разговорный курс английского с A0 до A2" width="960" height="666" loading="lazy" decoding="async"
+                    alt="Платформа EnglishGalaxy: разговорный курс английского с нуля до A2" width="960" height="666" loading="lazy" decoding="async"
                   />
                 </div>
               </div>
@@ -943,13 +1096,13 @@
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
                 preview-video-url="https://drive.google.com/file/d/1PUBQk56159-hie6NV4adW7sBqbQJWja3/preview"
-                aria-label="Watch Portfolio preview"
+                aria-label="Посмотреть превью проекта"
               >
                 <div class="info-div">
                   <h3 class="ProjectHeading">CRM Audit Platform</h3>
                   <p class="ProjectDescription">
-                    CRM Audit Platform – платформа для автоматизации работы с
-                    документами в рамках аудиторских процессов.
+                    Платформа автоматизирует работу с документами в аудиторских
+                    процессах.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Стек:</strong> React, TypeScript, MobX, Node.js,
@@ -960,7 +1113,7 @@
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1PUBQk56159-hie6NV4adW7sBqbQJWja3/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -983,14 +1136,13 @@
                 class="project-box project-box5 js-tilt"
                 onclick="showVideoModal(this)"
                 preview-video-url="https://drive.google.com/file/d/1IuVb5VpTnHq7I2buJEFm28UDmi8puIHl/preview"
-                aria-label="Watch Portfolio preview"
+                aria-label="Посмотреть превью проекта"
               >
                 <div class="info-div">
                   <h3 class="ProjectHeading">Crypto Art</h3>
                   <p class="ProjectDescription">
-                    Crypto Art – веб-платформа для публикации и обсуждения
-                    статей о криптовалюте. Пользователи могут читать,
-                    комментировать и делиться собственными материалами.
+                    Веб-платформа для публикации и обсуждения статей о криптовалюте.
+                    Можно читать, комментировать и выкладывать свои материалы.
                   </p>
                   <p class="ProjectDescription">
                     <strong>Стек:</strong> Next.js, TypeScript, Redux, FastApi,
@@ -1001,7 +1153,7 @@
                       class="cta"
                       onclick="event.stopPropagation(); showVideoModal(this)"
                       preview-video-url="https://drive.google.com/file/d/1IuVb5VpTnHq7I2buJEFm28UDmi8puIHl/preview"
-                      aria-label="Watch Portfolio preview"
+                      aria-label="Посмотреть превью проекта"
                     >
                       <span>Посмотреть</span>
                       <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -1014,7 +1166,7 @@
                 <div class="image-div">
                   <img
                     src="/assets/img/projects/crypto-art.webp"
-                    alt="Crypto Art: платформа публикации статей о криптовалюте" width="955" height="472" loading="lazy" decoding="async"
+                    alt="Crypto Art: платформа со статьями о криптовалюте и обсуждениями" width="955" height="472" loading="lazy" decoding="async"
                   />
                 </div>
               </div>
@@ -1026,8 +1178,13 @@
     <!-- main ends here -->
 
     <footer id="footer">
-      <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-        <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+      <button
+        class="fas"
+        id="backtotopbutton"
+        onclick="scrolltoTopfunction()"
+        style="display: none"
+      >
+        <article aria-label="Наверх">←НАВЕРХ</article>
       </button>
       <div class="footer-background">
         <div class="footer-blob"></div>
@@ -1037,9 +1194,9 @@
           <div class="two-words">
             <article
               tabindex="0"
-              aria-label="Learning, Living, and Leveling Up, my quote"
+              aria-label="Учусь, живу, прокачиваюсь — мой девиз"
             >
-              "Learning, Living, and Leveling Up."
+              "Учусь, живу, прокачиваюсь."
             </article>
           </div>
           <div class="start-talk">
@@ -1054,46 +1211,31 @@
               <a
                 href="https://t.me/i_nikmak"
                 target="_blank"
-                aria-label="My telegram"
-                ><svg
-                  class="SocialHandle"
-                  width="60px"
-                  height="60px"
-                  viewBox="0 0 48 48"
-                >
+                aria-label="Мой Telegram"
+                ><svg class="SocialHandle" viewBox="0 0 48 48">
                   <path
                     d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"
-                  /></svg
-              ></a>
-
-              <a
-                href="https://www.linkedin.com/in/i-nikmak/"
-                target="_blank"
-                aria-label="My Linkdin"
-                ><svg class="SocialHandle" viewBox="0 0 448 512">
-                  <path
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  /></svg
-              ></a>
+                  ></path></svg
+                ></a>
 
               <a
                 href="https://github.com/nikmakpak"
                 target="_blank"
-                aria-label="My github"
+                aria-label="Мой GitHub"
                 ><svg viewBox="0 0 496 512" class="SocialHandle">
                   <path
                     d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  /></svg
+                  ></path></svg
               ></a>
 
               <a
                 href="mailto:imakarenkonp@gmail.com"
                 target="_blank"
-                aria-label="My G mail"
+                aria-label="Написать на почту"
                 ><svg id="GmailLogo" viewBox="0 0 512 512">
                   <path
                     d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                  /></svg
+                  ></path></svg
               ></a>
             </div>
           </div>
@@ -1114,8 +1256,8 @@
           </div> -->
           </div>
           <div class="footer-bottom">
-            <article aria-label="Design and build info">
-              Design & Built by Makarenko Nikita &copy;
+            <article aria-label="Информация об авторе">
+              Дизайн и разработка — Никита Макаренко &copy;
               <span id="yearRange">2021 - </span>
             </article>
           </div>

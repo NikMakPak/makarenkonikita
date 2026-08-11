@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://nikmakpak.github.io/makarenkonikita/sitemap.xml
+Sitemap: https://imakarenkonikita.vercel.app/sitemap.xml

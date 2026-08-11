@@ -1,22 +1,3 @@
-#labelforsetting,
-#labelforvisualmode,
-#switchforvisualmode:checked + #labelforvisualmode {
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#labelforsetting,
-#labelforsound {
-  height: 40px;
-  background-size: 60%;
-}
-
-#preloader,
-.invertapplied,
-.invertsettinglabel {
-  filter: invert(1);
-}
-
 #preloader,
 noscript {
   width: 100%;
@@ -28,9 +9,12 @@ noscript {
   background-color: var(--color-dark-mode);
 }
 
+/* clip, not hidden: hidden on body turns it into a scroll container that can
+   still be scrolled programmatically, which is how the sideways drift happened. */
+html,
 .main,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #backtotopbutton article,
@@ -71,6 +55,17 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Every <img> carries width/height attributes so the browser can reserve space
+   before the file arrives (no layout shift). Those attributes map to CSS
+   presentational hints, so a rule below that sets only ONE dimension would leave
+   the other pinned to the attribute and squash the image. Releasing both here
+   keeps the aspect ratio: this selector loses to every class rule that follows,
+   but still outranks a presentational hint. */
+img {
+  width: auto;
+  height: auto;
+}
+
 ::selection {
   background-color: transparent;
 }
@@ -84,7 +79,7 @@ html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  cursor: url(click.png), auto;
+  cursor: url(/assets/cursor.png), auto;
 }
 
 :root {
@@ -92,7 +87,6 @@ html {
   --color-white: #fff;
   --color-black: #000;
   --color-dark-mode: #11111b;
-  --color-light-mode: #ece7e1;
   --color-ddd-color: #ddd;
   --color-gray: #c4c4c4;
   --color-purple: #8000ff;
@@ -151,12 +145,6 @@ html {
   pointer-events: none;
 }
 
-.setting-container,
-.settingactivate {
-  transform-origin: left;
-  transition-duration: 0.5s;
-}
-
 .cursor-inner.hover {
   width: 25px;
   height: 25px;
@@ -178,136 +166,23 @@ html {
   left: -20px;
 }
 
-.light-mode {
-  --color-dark-mode: #ece7e1;
-  --color-black: #fff;
-  --color-white: #000;
-  --color-ddd-color: rgb(31, 31, 31);
-  --color-navbarBorder-dark: #d1d6eb;
-  --static-heading-gradient-blue: #0f7878;
-  --static-heading-gradient-pink: #f09bb9;
-  --color-shadowDark: #e2ddd7;
-  --tech-stack-box-first-color: #e7e2db;
-  --tech-stack-box-second-color: #ece7e100;
-  --tech-stack-box-border-color: #dad5cf;
-}
-
-.setting-container {
-  width: 60px;
-  height: 50px;
-  margin-left: 50px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  padding: 20px 0;
-}
-
-#labelforsetting {
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  background-image: url(src/svg/settings-svgrepo-com.svg);
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-.soundtogglebuttoncontainer,
-.visualmodetogglebuttoncontainer {
-  align-items: center;
-  width: fit-content;
-  transition-duration: 0.3s;
-}
-
-.settingactivate {
-  width: 200px;
-}
-
-.visualmodetogglebuttoncontainer {
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  transform: translate(-50px) scale(0);
-}
-
-.visualmodeshow {
-  transition-duration: 0.3s;
-  transform: translate(0) scale(1);
-}
-
-#switchforsetting,
-#switchforsound,
-#switchforvisualmode,
 .hamburger,
 .mobiletogglemenu {
   display: none;
 }
 
-#switchforsetting:checked + #labelforsetting {
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
-}
-
-#labelforvisualmode {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background-image: url(src/png/crescent-moon\\(1\).png);
-  background-size: 50%;
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-#switchforvisualmode:checked + #labelforvisualmode {
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
-  background-image: url(src/png/sun.png);
-  background-size: 60%;
-}
-
-.soundtogglebuttoncontainer {
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  transform: translate(-130px) scale(0);
-}
-
-#labelforsound,
 #preloader {
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.soundmodeshow {
-  transition-delay: 0.1s;
-  transition-duration: 0.5s;
-  display: inline-block;
-  transform: translate(0) scale(1);
+  /* white spinner sheet + invert = dark preloader matching the site */
+  filter: invert(1);
 }
 
 .logo,
 .logo:hover {
   transition-duration: 1s;
-}
-
-#labelforsound {
-  position: relative;
-  justify-content: center;
-  width: 40px;
-  background-image: url(src/svg/Mute_Icon.svg);
-  cursor: pointer;
-  transition-duration: 0.5s;
-}
-
-#switchforsound:checked + #labelforsound {
-  transition-duration: 0.5s;
-  background-image: url(src/svg/Speaker_Icon.svg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 header {
@@ -324,7 +199,7 @@ header {
   z-index: 99999;
   justify-content: center;
   overflow-y: hidden;
-  background-image: url(src/svg/Pulse-0.4s-200px.svg);
+  background-image: url(/assets/icons/preloader.svg);
   background-size: 10%;
 }
 
@@ -421,6 +296,48 @@ noscript {
 .navbar-tabs-ul a {
   color: var(--color-white);
   font-weight: 100;
+}
+
+/* ---------------------------------------------------- language switch (EN/RU) */
+
+.lang-switch {
+  gap: 6px;
+  font-family: "Fira Code", monospace;
+  letter-spacing: 0.05em;
+}
+
+.lang-switch a {
+  color: var(--color-gray);
+  transition: color 0.25s;
+}
+
+.lang-switch a:hover,
+.lang-switch a:focus-visible {
+  color: var(--color-light-blue);
+}
+
+.lang-switch-current {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.lang-switch-sep {
+  color: var(--color-gray);
+  opacity: 0.5;
+}
+
+/* Screen-reader-only heading: the visible hero splits letters into <p> elements,
+   which cannot live inside an <h1>. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .logo {
@@ -586,6 +503,13 @@ noscript {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  /* .blob sits at right:-15%; without this it anchored to the page instead of
+     the hero and made the document ~230px wider than the viewport. Anything
+     that then scrolled the page sideways (an #anchor jump, a focus ring) shifted
+     the whole layout left. clip trims it horizontally without creating a scroll
+     container, so vertical overflow still behaves as before. */
+  position: relative;
+  overflow-x: clip;
 }
 
 .text-content {
@@ -823,6 +747,46 @@ noscript {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 16px;
+  /* the CTA is a fixed 281px, so let the icon button drop to its own line
+     rather than overflow on narrow screens */
+  flex-wrap: wrap;
+}
+
+/* Square icon button next to the hero CTA: transparent with a hairline border
+   like the tags above, easing into the CTA's grey on hover. */
+.iconBtn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #e2dede;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.45s ease, border-color 0.45s ease,
+    transform 0.3s ease;
+}
+
+.iconBtn svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-white);
+  transition: fill 0.45s ease;
+}
+
+.iconBtn:hover,
+.iconBtn:focus-visible {
+  background-color: rgba(230, 230, 230, 0.466);
+  border-color: rgba(230, 230, 230, 0.466);
+  transform: translateY(-2px);
+}
+
+.iconBtn:hover svg,
+.iconBtn:focus-visible svg {
+  fill: #000;
 }
 
 .letsTalkBtn {
@@ -1236,59 +1200,68 @@ footer {
   width: 100%;
 }
 
+/* Two equal columns with real padding on all sides. The card has no fixed
+   height: the text column drives it and the preview stretches to match, so a
+   long description makes the card taller instead of being clipped. */
 .project-box {
   width: 100%;
-  height: 400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  min-height: 340px;
+  display: grid;
+  /* minmax(0,…) so a long stack line cannot force a column wider than its share */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
   transition-duration: 0.3s;
   border-radius: 30px;
   border: 1px solid var(--tech-stack-box-border-color);
 }
 
 .info-div {
-  width: 50%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 20px;
-  padding: 0 40px;
+  gap: 18px;
+  padding: 8px 8px 8px 16px;
 }
 
-.faviconforProject {
-  width: 30px;
-  border-radius: 50%;
-}
-
-.faviconforProjectAquaregia {
-  width: 20px;
-}
-
+/* A fixed 3:2 frame — the median ratio of the screenshots — so every card crops
+   the same way and a long description can never stretch a preview into a
+   distorted sliver. The image is absolute so its intrinsic height never feeds
+   back into row sizing; max-height keeps it inside a short card. */
 .image-div {
-  width: 50%;
-  height: 100%;
-  padding-top: 70px;
-  padding-left: 10px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 .image-div img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  border-top-left-radius: 30px;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
 }
 
 .ProjectHeading {
   color: var(--color-white);
   font-size: 3.4rem;
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .ProjectDescription {
   color: gray;
   font-size: 1.7rem;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 .project-buttons {
@@ -1938,19 +1911,26 @@ footer {
     width: 80%;
   }
 
+  /* One column: the preview sits above the text, both full width. */
   .project-box {
-    flex-direction: column;
-    height: 800px;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 24px;
+    padding: 24px;
   }
 
   .image-div,
   .info-div {
     width: 100%;
-    height: 50%;
   }
 
   .image-div {
-    padding: 0 0 0 80px;
+    order: -1;
+    max-height: none;
+  }
+
+  .info-div {
+    padding: 0 8px 8px;
   }
 }
 
@@ -1985,10 +1965,6 @@ footer {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
-  }
-
-  .setting-container {
-    margin-left: 0;
   }
 
   .dp::after,
@@ -2054,20 +2030,13 @@ footer {
   }
 
   .project-box {
-    height: 550px;
-  }
-
-  .info-div {
-    height: 60%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 24px;
   }
 
   .image-div {
-    height: 40%;
-    padding-left: 50px;
-  }
-
-  .image-div img {
-    border-top-left-radius: 10px;
+    border-radius: 14px;
   }
 
   .tech-stack-wrapper {
@@ -2094,7 +2063,7 @@ footer {
   }
 
   .info-div {
-    padding: 0 30px;
+    padding: 0 4px 4px;
   }
 
   .two-words article {
@@ -2178,7 +2147,7 @@ footer {
     rgba(255, 255, 255, 0.1),
     transparent
   );
-  border-radius: 2rem;
+  border-radius: inherit;
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
@@ -2285,6 +2254,7 @@ footer {
 }
 
 .iframe-container {
+  position: relative;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -2296,6 +2266,70 @@ footer {
   height: 100%;
   border: none;
   border-radius: 10px;
+}
+
+/* Covers the iframe while Google Drive boots, instead of a bare black rectangle.
+   main.js clears it on the iframe's load event (with a timeout fallback). */
+.modal-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-spinner {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0turn,
+    rgba(107, 197, 248, 0) 0turn,
+    var(--color-light-blue) 0.6turn,
+    var(--color-purple) 1turn
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 4px),
+    #000 calc(100% - 3.5px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 4px),
+    #000 calc(100% - 3.5px)
+  );
+  animation: modal-spin 0.9s linear infinite;
+}
+
+@keyframes modal-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.modal-loader-text {
+  font-family: "Fira Code", monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--color-gray);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-spinner {
+    animation-duration: 2.4s;
+  }
 }
 
 @media (max-width: 768px) {

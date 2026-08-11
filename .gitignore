@@ -1,1 +1,10 @@
-/.vscode
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+node_modules/
+.vercel
+
+# local Claude Code skills/config
+.claude/
+__pycache__/
